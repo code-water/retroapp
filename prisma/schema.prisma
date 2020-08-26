@@ -5,7 +5,7 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-  binaryTargets = env("BINARY_TARGETS")
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
 }
 
 model Post {
